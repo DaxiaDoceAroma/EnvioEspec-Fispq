@@ -1,0 +1,712 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Especificação Técnica - FISQP</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      a:visited {
+        text-decoration: none;
+      }
+
+      .AppletMenu {
+        background-color: #2893b4;
+        color: #ffffff;
+        height: 25;
+        width: 750;
+        font-family: yes;
+      }
+
+      .pageTop {
+        background-color: #ffffff;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #808080;
+      }
+
+      .pageLeft {
+        background-color: #ffffff;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #808080;
+      }
+
+      .pageBottom {
+        background-color: #f2fbff;
+      }
+
+      .HeaderCadBG {
+        background-color: #797e80;
+        font-family: Verdana;
+        font-size: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      .BrowseLineDestaq {
+        background-color: #e0e0e0;
+        font-family: Verdana;
+        font-size: 10px;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .BrowseLineTaskHL {
+        background-color: #e0e0e0;
+        font-family: Verdana;
+        font-size: 10px;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .BrowseLineNormal {
+        background-color: #efefef;
+        font-family: Verdana;
+        font-size: 10px;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .barcad {
+        font-family: Tahoma, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: EEEEEE;
+      }
+      .barcad:hover {
+        color: C4C4C4;
+        text-decoration: none;
+      }
+
+      .linhas {
+        font-family: Tahoma, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #525252;
+      }
+      .linhas:hover {
+        color: red;
+        text-decoration: none;
+      }
+
+      .LinkAcao {
+        font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #7f7f7f;
+      }
+      .LinkAcao:hover {
+        color: #bfbfbf;
+        text-decoration: none;
+      }
+
+      .TaskSection {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #525252;
+      }
+      .TaskSection:hover {
+        color: #7f7f7f;
+        text-decoration: none;
+      }
+
+      .Labels {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #535f82;
+      }
+
+      .LinkLabel {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #535f82;
+      }
+      .LinkLabel:hover {
+        color: #6699cc;
+        text-decoration: none;
+      }
+
+      .NumSecao {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 16pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #666666;
+      }
+
+      .TxtSecao {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 14pt;
+        text-decoration: none;
+        color: #999999;
+      }
+
+      .Normal {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+      }
+
+      .LinkCabec1 {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        color: #336699;
+        text-decoration: none;
+      }
+      .LinkCabec1:hover {
+        color: #c0c0c0;
+        text-decoration: none;
+      }
+
+      .LinkCabec2 {
+        font-family: Tahoma, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #6699cc;
+      }
+      .LinkCabec2:hover {
+        color: #fcc403;
+        text-decoration: none;
+      }
+
+      .TitAreaPortal {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #808080;
+      }
+
+      .TitMsgForum {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #535f82;
+      }
+      .TitMsgForum:hover {
+        color: red;
+      }
+
+      .AutorMsgForum {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #666666;
+      }
+
+      .DescrMsgForum {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+        text-decoration: none;
+        color: #757575;
+      }
+
+      .TitPublicPortal {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #2d7b00;
+      }
+      .TitPublicPortal:hover {
+        color: red;
+        text-decoration: none;
+      }
+
+      .AutorMsgNovid {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #666666;
+      }
+
+      .DescrMsgNovid {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #535f82;
+      }
+      .DescrMsgNovid:hover {
+        color: red;
+        text-decoration: none;
+      }
+
+      .DescrMsgNovidHL {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: red;
+      }
+      .DescrMsgNovidHL:hover {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .TitRodapePortal {
+        font-family: Verdana;
+        font-size: 7pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #336699;
+      }
+      .TitRodapePortal:hover {
+        color: red;
+        text-decoration: none;
+        bgcolor: black;
+      }
+
+      .DesRodapePortal {
+        font-family: Verdana;
+        font-size: 7pt;
+        text-decoration: none;
+        color: #336699;
+      }
+
+      .AutorMsgDocto {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #666666;
+      }
+
+      .DescrMsgDocto {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 8pt;
+        color: #535f82;
+      }
+
+      .DescrMsgDoctodesab {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #666666;
+      }
+
+      .LinkVoltarNav {
+        font-family: Tahoma, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #525252;
+      }
+      .LinkVoltarNav:visited {
+        text-decoration: none;
+      }
+
+      .LinkVoltarNav:hover {
+        color: 990000;
+        text-decoration: none;
+      }
+
+      .LinkBarDocto {
+        font-family: Tahoma, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #004080;
+      }
+      .LinkBarDocto:hover {
+        color: #fcc403;
+        text-decoration: none;
+      }
+
+      .ChatBarNormal {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        color: white;
+        text-decoration: none;
+      }
+
+      .AutorMsgChat {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 9pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #535f82;
+      }
+      .AutorMsgChat:hover {
+        color: #6699cc;
+        text-decoration: none;
+      }
+
+      .DestiMsgChat {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #666666;
+      }
+      .DestiMsgChat:hover {
+        color: RED;
+        text-decoration: none;
+      }
+
+      .SubTitNoticias {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000066;
+      }
+
+      .TitPublicBusca {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #535f82;
+      }
+      .TitPublicBusca:hover {
+        color: red;
+        text-decoration: none;
+      }
+      .TitPublicBusca:visited {
+        color: #ff8000;
+        text-decoration: none;
+      }
+
+      .SubTitNavega {
+        font-family: Verdana;
+        font-size: 10pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #808080;
+      }
+      .SubTitNavega:hover {
+        color: red;
+        text-decoration: none;
+      }
+
+      .Linkdesab {
+        font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #bfbfbf;
+      }
+
+      .linhasrpr {
+        font-family: Tahoma, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #ce0000;
+      }
+      .linhasrpr:hover {
+        color: #ff0000;
+        text-decoration: none;
+      }
+
+      .MsgPublicPortalNormal {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: normal;
+        text-decoration: none;
+        color: #ff8000;
+      }
+
+      .MsgPublicPortalHigh {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: red;
+      }
+
+      .MsgPublicPortalLow {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: normal;
+        text-decoration: none;
+        color: white;
+      }
+
+      .BackgroundTicker {
+        background-color: black;
+      }
+
+      .TitPublicPortalVld {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #808080;
+      }
+
+      .TitPublicBuscaVld {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #808080;
+      }
+
+      .DescrMsgNoviddesab {
+        font-family: Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        text-decoration: none;
+        color: #666666;
+      }
+
+      .SecaoTarefa {
+        font-family: Verdana;
+        font-size: 7pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .DefaultField {
+        font-size: 9pt;
+        border-bottom: #aaaaaa 1px solid;
+        border-left: #aaaaaa 5px solid;
+        border-right: #aaaaaa 1px solid;
+        border-top: #aaaaaa 1px solid;
+      }
+
+      .HeaderCad {
+        font-family: Verdana;
+        font-size: 10px;
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .BrowserField {
+        font-family: Verdana;
+        font-size: 10px;
+        color: black;
+      }
+
+      .BrowserLink {
+        font-family: Verdana;
+        font-size: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #525252;
+      }
+      .BrowserLink:hover {
+        color: red;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .TituloDicas {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        font-weight: bold;
+        color: #808080;
+        text-decoration: none;
+      }
+
+      .ConteudoDicas {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        font-weight: normal;
+        color: #909090;
+        text-align: justify;
+        text-shadow: #ff0000;
+        text-decoration: none;
+      }
+
+      .TitWorkFlow {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #808080;
+      }
+
+      /************ DO NOT TRY TO UNDERSTAND THIS ************/
+
+      /***********************************************************/
+
+      .MenuBar {
+        font-family: Verdana;
+        font-size: xx-small;
+        color: #dcdcdc;
+        background-color: black;
+      }
+
+      .MenuItem {
+        ftfamily: Verdana, Arial, Helvetica, sans-serif;
+        ftsize: 10;
+        ftcolor: #000000;
+        bgcolor: #b0cee6;
+        idmenu: yes;
+      }
+
+      .MenuItemHL {
+        ftcolor: #ffffff;
+        bgcolor: #0c419a;
+        idmenuhl: yes;
+      }
+
+      .clsPart {
+        border: solid 1px black;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        cellspacing: 0;
+        cellpaddin: 0;
+      }
+
+      .clsPartContainer {
+        border: solid 1px gray;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        cellspacing: 0;
+      }
+
+      .clsPartHead {
+        background-color: #6699cc;
+        cursor: move;
+        font-size: 8;
+        font-family: verdana, arial, helvetica;
+        color: #ffffff;
+      }
+
+      .clsPartRight {
+        background-color: #6699cc;
+        background-position: middle right;
+        background-repeat: no-repeat;
+        cursor: hand;
+        font-size: 82%;
+        font-family: verdana, arial, helvetica;
+        color: #ffffff;
+      }
+
+      .clsHotArea {
+        cellspacing: 0;
+        border: solid 0px gray;
+      }
+
+      .toolbar {
+        cursor: default;
+        background: ButtonFace;
+        padding: 1px 1px 2px 1px;
+      }
+
+      .button {
+        background: ButtonFace;
+        cursor: hand;
+      }
+
+      .buttonPressed {
+        cursor: hand;
+        border: 1px solid;
+        border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+      }
+
+      .barraTituloRelat {
+        background-color: #384472;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 8pt;
+        font-weight: bold;
+        text-align: center;
+        vertical-alignment: middle;
+      }
+
+      .linkFolder {
+        font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #535f82;
+      }
+      .linkFolder:hover {
+        font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        font-weight: bold;
+        text-decoration: none;
+        color: #384472;
+      }
+
+      .mailBoards {
+      }
+      .mailBoards .boardsHeader {
+        background-color: #607d8b;
+        height: 90px;
+        padding: 1px;
+      }
+      .mailBoards .boardsHeader img {
+        max-width: 290px;
+        width: auto;
+        height: auto;
+      }
+      .mailBoards .boardsContent {
+        padding: 10px;
+      }
+      .mailBoards h3 {
+        color: 00b33c;
+      }
+      .mailBoards .boardsContentBody {
+        font-family: Arial;
+        padding: 5px;
+      }
+      .mailBoards .boardsFooter {
+        background-color: #e6e6e6;
+        height: 70px;
+        padding: 1px;
+      }
+      .mailBoards .boardsFooter img {
+        max-width: 250px;
+        width: auto;
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+    <br />
+    <p class="" style="margin-left: 1%; color: #01426a">
+      Prezado(a) Cliente,
+      <br />
+      <br />
+      Segue anexo documento(s) referente a especificação do produto conforme solicitado.
+      <br />
+      Estamos a disposição para eventuais esclarecimentos.
+    </p>
+
+    <br />
+
+    <p class="" style="margin-left: 1%; color: #01426a">
+      Atenciosamente,
+      <br />
+    </p>
+    <div align="left">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <#if SIGNATURE??>
+          <tr>
+            <td>
+                <img width="400px" height="233px"  src="${SIGNATURE!''}" />
+            </td>
+          </tr>
+          </#if>
+          <tr>
+            <td>
+              <img width="400px" height="68px"   src="https://drive.google.com/uc?export=view&amp;id=1B6Lvd-PkRCUoWCGefMXGSIS1GgTRkkjq" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

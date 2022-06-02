@@ -1,0 +1,123 @@
+<!-- Dataset ds_tipo_documentacao_cliente -->
+
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/webdesk/vcXMLRPC.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/zoomModal.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/zoom.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+  </head>
+  <body onload="main()">
+    <div class="fluig-style-guide">
+      <form name="form" role="form">
+        <div class="container-fluid">
+          <div class="page-header">
+            <h3>
+              <i class="fluigicon fluigicon-user-edit"></i>
+              <span>Log de alteração</span>
+            </h3>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="dataCriacao">Data de criação</label>
+                <input type="text" name="dataCriacao" id="dataCriacao" class="form-control" readonly />
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="id_criador">ID Usuário Criador</label>
+                <input type="text" name="id_criador" id="id_criador" class="form-control" readonly />
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="criador">Usuário Criador</label>
+                <input type="text" name="criador" id="criador" class="form-control" readonly />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="dataEdicao">Data de última edição</label>
+                <input type="text" name="dataEdicao" id="dataEdicao" class="form-control" readonly />
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="id_editor">ID Usuário Editor</label>
+                <input type="text" name="id_editor" id="id_editor" class="form-control" readonly />
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="editor">Usuário Criador</label>
+                <input type="text" name="editor" id="editor" class="form-control" readonly />
+              </div>
+            </div>
+          </div>
+
+          <div class="page-header">
+            <h3>
+              <i class="flaticon flaticon-document-group"></i>
+              <span>Tipo de Documentação</span>
+            </h3>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="codigo">Código</label>
+                <input type="text" name="codigo" id="codigo" class="form-control" readonly />
+              </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="descricao">Descrição</label>
+                <span class="required text-danger" data-toggle="tooltip" data-placement="top" title="Obrigatório"><strong>*</strong></span>
+                <input type="text" name="descricao" id="descricao" class="form-control" />
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="diretorio">Diretório</label>
+                <span class="required text-danger" data-toggle="tooltip" data-placement="top" title="Obrigatório"><strong>*</strong></span>
+                <input type="hidden" name="codigoDiretorio" id="codigoDiretorio" />
+                <div class="input-group">
+                  <input type="text" name="diretorio" id="diretorio" class="form-control" readonly />
+                  <div class="input-group-addon group-zoom no-view zoom-click btn-primary fs-cursor-pointer" id="btnZoomDiretorio">
+                    <span class="fluigicon fluigicon-zoom-in"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label" for="templateEmail">Template de e-mail</label>
+                <span class="required text-danger" data-toggle="tooltip" data-placement="top" title="Obrigatório"><strong>*</strong></span>
+                <input type="hidden" name="idiomaTemplateEmail" id="idiomaTemplateEmail" />
+                <input type="hidden" name="codigoTemplateEmail" id="codigoTemplateEmail" />
+                <div class="input-group">
+                  <input type="text" name="templateEmail" id="templateEmail" class="form-control" readonly />
+                  <div class="input-group-addon group-zoom no-view zoom-click btn-primary fs-cursor-pointer" id="btnZoomTemplate">
+                    <span class="fluigicon fluigicon-zoom-in"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

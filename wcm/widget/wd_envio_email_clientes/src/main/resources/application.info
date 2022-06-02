@@ -1,0 +1,17 @@
+application.type=widget
+application.code=wd_envio_email_clientes
+application.title=Envio de Especificação Técnica e FISPQ
+application.description=Envio de Especificação Técnica e FISPQ
+application.category=Email
+application.renderer=freemarker
+developer.code=DMS
+developer.name=Danilo Marinho
+developer.url=https://hicoder.com.br/
+application.uiwidget=true
+application.mobileapp=true
+application.version=${build.version}-${build.revision}
+view.file=view.ftl
+edit.file=edit.ftl
+locale.file.base.name=wd_envio_email_clientes
+application.resource.js.1=/resources/js/wd_envio_email_clientes.js
+application.resource.css.2=/resources/css/wd_envio_email_clientes.css
